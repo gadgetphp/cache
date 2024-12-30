@@ -17,7 +17,6 @@
   "require": {
     "php": "^8.1",
     "ext-json": "*",
-    "gadgetphp/lang": "^1.0",
     "psr/cache": "^3.0"
   },
   "require-dev": {

@@ -4,56 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "22280042bdfbf7167d10759d7e352c36",
+    "content-hash": "9a15069b6b3b2392772e37fcc9160764",
     "packages": [
-        {
-            "name": "gadgetphp/lang",
-            "version": "v1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/gadgetphp/lang.git",
-                "reference": "22d707542e0b0f89df14ec533455154af52f8d7a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/gadgetphp/lang/zipball/22d707542e0b0f89df14ec533455154af52f8d7a",
-                "reference": "22d707542e0b0f89df14ec533455154af52f8d7a",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "php": "^8.1"
-            },
-            "require-dev": {
-                "gadgetphp/code-style": "^1.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Gadget\\Lang\\": [
-                        "src/Exception/",
-                        "src/Util/"
-                    ]
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Melody Kimball",
-                    "role": "lead"
-                }
-            ],
-            "homepage": "https://github.com/gadgetphp/lang",
-            "support": {
-                "issues": "https://github.com/gadgetphp/lang/issues",
-                "source": "https://github.com/gadgetphp/lang",
-                "wiki": "https://github.com/gadgetphp/lang/wiki"
-            },
-            "time": "2024-12-30T16:01:02+00:00"
-        },
         {
             "name": "psr/cache",
             "version": "3.0.0",
