@@ -16,8 +16,7 @@
   },
   "require": {
     "php": "^8.1",
-    "ext-json": "*",
-    "psr/cache": "^3.0"
+    "gadgetphp/contracts": "dev-main"
   },
   "require-dev": {
     "gadgetphp/code-style": "^1.0"
