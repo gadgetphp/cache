@@ -20,6 +20,9 @@ class CacheItemPoolCache implements CacheInterface
     }
 
 
+    /**
+     * @return CacheItemPoolInterface
+     */
     protected function getCache(): CacheItemPoolInterface
     {
         return $this->cache;
