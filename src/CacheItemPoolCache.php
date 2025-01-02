@@ -221,6 +221,6 @@ class CacheItemPoolCache implements CacheInterface
      */
     public function clear(): bool
     {
-        return $this->getCache()->clear();
+        return false;
     }
 }
