@@ -30,6 +30,22 @@ class CacheItemPoolCache implements CacheInterface
 
 
     /**
+     * @param string|string[] $namespace
+     * @param string[] $current
+     * @return string[]
+     */
+    protected function genNamespace(
+        string|array $namespace,
+        array $current = []
+    ): array {
+        $namespace = is_string($namespace)
+            ? explode("::", $namespace)
+            : $namespace;
+        return [...$current, ...$namespace];
+    }
+
+
+    /**
      * @return string[]
      */
     public function getNamespace(): array
