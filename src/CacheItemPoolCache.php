@@ -10,13 +10,20 @@ use Psr\Cache\CacheItemPoolInterface;
 class CacheItemPoolCache implements CacheInterface
 {
     /**
+     * @var string[] $namespace
+     */
+    private array $namespace;
+
+
+    /**
      * @param CacheItemPoolInterface $cache
-     * @param string[] $namespace
+     * @param string|string[] $namespace
      */
     public function __construct(
         private CacheItemPoolInterface $cache,
-        private array $namespace = []
+        string|array $namespace = []
     ) {
+        $this->namespace = $this->genNamespace($namespace);
     }
 
 
@@ -63,11 +70,11 @@ class CacheItemPoolCache implements CacheInterface
         string|array $namespace,
         bool $replace = false
     ): self {
-        $namespace = is_string($namespace) ? [$namespace] : $namespace;
-
         return new self(
             $this->cache,
-            $replace ? $namespace : [...$this->getNamespace(), ...$namespace]
+            $replace
+                ? $this->genNamespace($namespace)
+                : $this->genNamespace($namespace, $this->getNamespace())
         );
     }
 
