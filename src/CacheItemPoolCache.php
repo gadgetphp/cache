@@ -81,14 +81,21 @@ class CacheItemPoolCache implements CacheInterface
 
     /**
      * @param string $key
+     * @return string
+     */
+    protected function getKey(string $key): string
+    {
+        return hash('SHA256', implode('::', [...$this->getNamespace(), $key]));
+    }
+
+
+    /**
+     * @param string $key
      * @return CacheItemInterface
      */
     protected function getItem(string $key): CacheItemInterface
     {
-        return $this->getCache()->getItem(hash(
-            'SHA256',
-            implode('::', [...$this->getNamespace(), $key])
-        ));
+        return $this->getCache()->getItem($this->getKey($key));
     }
 
 
